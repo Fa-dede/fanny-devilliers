@@ -1,0 +1,67 @@
+header {
+  background-color: black;
+  height: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  a {
+    text-decoration: none;
+  }
+  @media screen and (max-width: 967px) {
+    height: 200px;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.name {
+  margin-left: 10rem;
+  color: #fff;
+  @media screen and (max-width: 967px) {
+    margin: unset;
+    padding-left: 1rem;
+  }
+}
+
+.navbar {
+  align-self: center;
+  margin-right: 10rem;
+  color: #fff;
+  @media screen and (max-width: 967px) {
+    margin: unset;
+    padding-right: 1rem;
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+  }
+  li {
+    display: flex;
+    justify-self: last baseline;
+    font-size: 20px;
+    text-transform: lowercase;
+    cursor: pointer;
+    &:hover {
+      color: rgb(11, 173, 157);
+      transition: 300ms;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    i {
+      color: #fff;
+      //   font-size: 30px;
+      &:hover {
+        color: rgb(11, 173, 157);
+        transition: 200ms;
+      }
+    }
+  }
+}
