@@ -21,7 +21,6 @@
   margin-top: 50px;
 
   i {
-    font-size: 5vw;
     font-size: max(50px);
     &:hover {
       color: rgb(11, 173, 157);
@@ -32,6 +31,7 @@
 
 .skills-title {
   text-align: center;
+  font-size: max(2vw, 2em);
 }
 
 // #skills {
