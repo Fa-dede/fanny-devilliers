@@ -7,6 +7,10 @@
   -webkit-box-shadow: 0px 10px 13px -7px #575353,
     5px 14px 0px 50px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #615f5f, 5px 14px 0px 50px rgba(73, 71, 71, 0);
+  @media screen and (max-width: 530px) {
+    margin: unset;
+    border-radius: unset;
+  }
 }
 .skills {
   display: flex;
@@ -17,7 +21,8 @@
   margin-top: 50px;
 
   i {
-    font-size: 60px;
+    font-size: 5vw;
+    font-size: max(50px);
     &:hover {
       color: rgb(11, 173, 157);
       transition: 300ms;
@@ -29,6 +34,6 @@
   text-align: center;
 }
 
-#skills {
-  padding-top: 5rem;
-}
+// #skills {
+//
+// }

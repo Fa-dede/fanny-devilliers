@@ -12,7 +12,8 @@ header {
     text-decoration: none;
   }
   @media screen and (max-width: 967px) {
-    height: 200px;
+    height: auto;
+    padding: 1vw 0;
     justify-content: center;
     align-content: center;
   }
@@ -29,20 +30,24 @@ header {
 
 .navbar {
   align-self: center;
-  margin-right: 10rem;
+  margin-right: 4vw;
   color: #fff;
-  @media screen and (max-width: 967px) {
-    margin: unset;
-    padding-right: 1rem;
-  }
+
   ul {
     display: flex;
     gap: 30px;
+    @media screen and (max-width: 530px) {
+      padding-left: unset;
+    }
   }
   li {
     display: flex;
     justify-self: last baseline;
-    font-size: 20px;
+    font-size: 2vw;
+    font-size: max(20px);
+    @media screen and (max-width: 530px) {
+      font-size: 3vw;
+    }
     text-transform: lowercase;
     cursor: pointer;
     &:hover {

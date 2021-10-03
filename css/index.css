@@ -16,7 +16,8 @@ header a {
 }
 @media screen and (max-width: 967px) {
   header {
-    height: 200px;
+    height: auto;
+    padding: 1vw 0;
     justify-content: center;
     align-content: center;
   }
@@ -35,25 +36,30 @@ header a {
 
 .navbar {
   align-self: center;
-  margin-right: 10rem;
+  margin-right: 4vw;
   color: #fff;
-}
-@media screen and (max-width: 967px) {
-  .navbar {
-    margin: unset;
-    padding-right: 1rem;
-  }
 }
 .navbar ul {
   display: flex;
   gap: 30px;
 }
+@media screen and (max-width: 530px) {
+  .navbar ul {
+    padding-left: unset;
+  }
+}
 .navbar li {
   display: flex;
   justify-self: last baseline;
-  font-size: 20px;
+  font-size: 2vw;
+  font-size: max(20px);
   text-transform: lowercase;
   cursor: pointer;
+}
+@media screen and (max-width: 530px) {
+  .navbar li {
+    font-size: 3vw;
+  }
 }
 .navbar li:hover {
   color: #0bad9d;
@@ -115,6 +121,12 @@ header a {
   text-align: center;
   display: flex;
   margin: auto;
+  margin-bottom: 5vw;
+}
+@media screen and (max-width: 530px) {
+  .loader {
+    width: 100vw;
+  }
 }
 
 .skills-box {
@@ -124,6 +136,12 @@ header a {
   background-color: rgba(255, 192, 203, 0.4);
   -webkit-box-shadow: 0px 10px 13px -7px #575353, 5px 14px 0px 50px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #615f5f, 5px 14px 0px 50px rgba(73, 71, 71, 0);
+}
+@media screen and (max-width: 530px) {
+  .skills-box {
+    margin: unset;
+    border-radius: unset;
+  }
 }
 
 .skills {
@@ -135,7 +153,8 @@ header a {
   margin-top: 50px;
 }
 .skills i {
-  font-size: 60px;
+  font-size: 5vw;
+  font-size: max(50px);
 }
 .skills i:hover {
   color: #0bad9d;
@@ -144,10 +163,6 @@ header a {
 
 .skills-title {
   text-align: center;
-}
-
-#skills {
-  padding-top: 5rem;
 }
 
 .projects-section {
@@ -167,6 +182,11 @@ header a {
   flex-wrap: wrap;
   gap: 3rem;
 }
+@media screen and (max-width: 530px) {
+  .project-list {
+    margin: 2rem;
+  }
+}
 
 .project {
   z-index: 99;
@@ -177,6 +197,8 @@ header a {
   border-radius: 2rem;
   width: 30%;
   max-height: 100%;
+  -webkit-box-shadow: 0px 10px 13px -7px #575353, 5px 14px 0px 50px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #615f5f, 5px 14px 0px 50px rgba(73, 71, 71, 0);
 }
 @media screen and (max-width: 1119px) {
   .project {
