@@ -14,69 +14,96 @@
   margin: 0 5rem;
   flex-wrap: wrap;
   gap: 3rem;
+
   @media screen and (max-width: 530px) {
     margin: 2rem;
   }
 }
 
 .project {
-  z-index: 99;
+  // z-index: auto;
   display: flex;
-  flex-direction: column;
+  max-width: 550px;
+  // flex-direction: column;
   justify-content: center;
   cursor: pointer;
   border-radius: 2rem;
-  width: 45%;
+  min-width: 300px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 2;
+  width: 22%;
   max-height: 100%;
   -webkit-box-shadow: 0px 10px 13px -7px #575353,
     5px 14px 0px 50px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #615f5f, 5px 14px 0px 50px rgba(73, 71, 71, 0);
-  @media screen and (max-width: 1119px) {
-    width: 40%;
-    max-height: 299px;
-  }
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    max-height: 299px;
-  }
-  &:hover + .display {
-    opacity: 1;
-  }
   &:hover {
     transform: scale(1.05);
     transition: 600ms;
   }
-}
-
-.display {
-  width: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-  height: inherit;
-  opacity: 0.2;
-  height: 300px;
-  max-width: 100%;
-  &:hover {
-    opacity: 0.7;
-    transition: 700ms;
-
-    & + .project-title {
-      opacity: 0;
-      transition: 600ms;
-    }
+  &:hover .display {
+    opacity: 1;
+    transition: 600ms;
+  }
+  &:hover p {
+    opacity: 0;
+  }
+  &:hover .technos-used {
+    display: none;
+  }
+  &:hover .logo-title {
+    display: flex;
+  }
+  &:hover .logo-title-2 {
+    display: none;
+  }
+  &:hover .responsive {
+    display: none;
   }
 }
 
+.display {
+  object-fit: cover;
+  border-radius: inherit;
+  // min-height: 100%;
+  height: 300px;
+  opacity: 0.2;
+  width: 100%;
+  // max-width: 100%;
+  min-width: 100%;
+}
+
 .project-title {
-  z-index: -1;
   position: relative;
   bottom: 85%;
   padding: 0 1.8rem;
   color: rgb(71, 68, 68);
   max-height: 0px;
-  h4 {
-    font-size: 30px;
-  }
+}
+
+.responsive {
+  width: 50px;
+  position: absolute;
+  display: inline;
+  right: 20px;
+  top: -25px;
+  bottom: 40px;
+  opacity: 1;
+}
+
+.logo-title,
+.logo-title-2 {
+  max-width: 230px;
+}
+
+.logo-title {
+  opacity: 1;
+  margin: auto;
+  display: none;
+}
+
+.logo-title-2 {
+  opacity: 0.7;
 }
 
 .technos-used {

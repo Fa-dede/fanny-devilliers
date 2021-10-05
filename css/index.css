@@ -168,6 +168,9 @@ header a {
   color: #0bad9d;
   transition: 300ms;
 }
+.skills img {
+  width: 70px;
+}
 
 .skills-title {
   text-align: center;
@@ -198,65 +201,84 @@ header a {
 }
 
 .project {
-  z-index: 99;
   display: flex;
-  flex-direction: column;
+  max-width: 550px;
   justify-content: center;
   cursor: pointer;
   border-radius: 2rem;
-  width: 45%;
+  min-width: 300px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 2;
+  width: 22%;
   max-height: 100%;
   -webkit-box-shadow: 0px 10px 13px -7px #575353, 5px 14px 0px 50px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #615f5f, 5px 14px 0px 50px rgba(73, 71, 71, 0);
-}
-@media screen and (max-width: 1119px) {
-  .project {
-    width: 40%;
-    max-height: 299px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .project {
-    width: 100%;
-    max-height: 299px;
-  }
-}
-.project:hover + .display {
-  opacity: 1;
 }
 .project:hover {
   transform: scale(1.05);
   transition: 600ms;
 }
+.project:hover .display {
+  opacity: 1;
+  transition: 600ms;
+}
+.project:hover p {
+  opacity: 0;
+}
+.project:hover .technos-used {
+  display: none;
+}
+.project:hover .logo-title {
+  display: flex;
+}
+.project:hover .logo-title-2 {
+  display: none;
+}
+.project:hover .responsive {
+  display: none;
+}
 
 .display {
-  width: 100%;
   object-fit: cover;
   border-radius: inherit;
-  height: inherit;
-  opacity: 0.2;
   height: 300px;
-  max-width: 100%;
-}
-.display:hover {
-  opacity: 0.7;
-  transition: 700ms;
-}
-.display:hover + .project-title {
-  opacity: 0;
-  transition: 600ms;
+  opacity: 0.2;
+  width: 100%;
+  min-width: 100%;
 }
 
 .project-title {
-  z-index: -1;
   position: relative;
   bottom: 85%;
   padding: 0 1.8rem;
   color: #474444;
   max-height: 0px;
 }
-.project-title h4 {
-  font-size: 30px;
+
+.responsive {
+  width: 50px;
+  position: absolute;
+  display: inline;
+  right: 20px;
+  top: -25px;
+  bottom: 40px;
+  opacity: 1;
+}
+
+.logo-title,
+.logo-title-2 {
+  max-width: 230px;
+}
+
+.logo-title {
+  opacity: 1;
+  margin: auto;
+  display: none;
+}
+
+.logo-title-2 {
+  opacity: 0.7;
 }
 
 .technos-used {
