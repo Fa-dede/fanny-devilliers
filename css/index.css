@@ -171,6 +171,10 @@ header a {
 .skills img {
   width: 70px;
 }
+.skills img.less {
+  width: 40px;
+  margin-top: 20px;
+}
 
 .skills-title {
   text-align: center;
@@ -235,6 +239,9 @@ header a {
 .project:hover .logo-title-2 {
   display: none;
 }
+.project:hover .title-text {
+  display: none;
+}
 .project:hover .responsive {
   display: none;
 }
@@ -254,6 +261,10 @@ header a {
   padding: 0 1.8rem;
   color: #474444;
   max-height: 0px;
+}
+
+.title-text {
+  font-size: 30px;
 }
 
 .responsive {

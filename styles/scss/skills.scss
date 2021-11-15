@@ -1,3 +1,7 @@
+// * {
+//   border: solid 1px black;
+// }
+
 .skills-box {
   //   border: 0.2px rgb(155, 152, 152) solid;
   margin: 0 5rem;
@@ -30,6 +34,10 @@
 
   img {
     width: 70px;
+    &.less {
+      width: 40px;
+      margin-top: 20px;
+    }
   }
 }
 

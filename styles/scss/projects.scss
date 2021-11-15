@@ -57,6 +57,10 @@
   &:hover .logo-title-2 {
     display: none;
   }
+  &:hover .title-text {
+    display: none;
+  }
+
   &:hover .responsive {
     display: none;
   }
@@ -79,6 +83,10 @@
   padding: 0 1.8rem;
   color: rgb(71, 68, 68);
   max-height: 0px;
+}
+
+.title-text {
+  font-size: 30px;
 }
 
 .responsive {
